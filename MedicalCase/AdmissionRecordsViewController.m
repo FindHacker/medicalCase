@@ -14,8 +14,9 @@
 #import "ParentNode.h"
 #import "Node.h"
 #import "Template.h"
+#import "WriteMedicalRecordVCViewController.h"
 
-@interface AdmissionRecordsViewController () <UITableViewDataSource,UITableViewDelegate,AdmissionRecordCellDelegate,ShowTemplateViewControllerTwo,NSFetchedResultsControllerDelegate>
+@interface AdmissionRecordsViewController () <UITableViewDataSource,UITableViewDelegate,AdmissionRecordCellDelegate,ShowTemplateViewControllerTwo,NSFetchedResultsControllerDelegate,WriteMedicalRecordVCViewControllerDelegate>
 @property (weak, nonatomic) IBOutlet UITableView *tabelView;
 @property (weak, nonatomic) IBOutlet UILabel *nameLabel;
 @property (weak, nonatomic) IBOutlet UILabel *genderLabel;
@@ -344,7 +345,7 @@
     self.selectedStr = label.text;
     
     self.currentIndexPath = indexPath;
-    [self performSegueWithIdentifier:@"popoverTemSegue" sender:nil];
+    [self performSegueWithIdentifier:@"ToWirteMedicalCaseSegue" sender:nil];
 }
 
 ///
@@ -420,15 +421,28 @@
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
-    if ([segue.identifier isEqualToString:@"popoverTemSegue"]) {
-        ShowTemplateViewControllerTwo *showVC = (ShowTemplateViewControllerTwo*)segue.destinationViewController;
-        showVC.fetchStr = self.selectedStr;
-        showVC.showTempDelegate  =self;
-        
+//    if ([segue.identifier isEqualToString:@"popoverTemSegue"]) {
+//        ShowTemplateViewControllerTwo *showVC = (ShowTemplateViewControllerTwo*)segue.destinationViewController;
+//        showVC.fetchStr = self.selectedStr;
+//        showVC.showTempDelegate  =self;
+//        
+//        [[NSUserDefaults standardUserDefaults] setBool:YES forKey:@"referenceTemplateString"];
+//    }
+    if ([segue.identifier isEqualToString:@"ToWirteMedicalCaseSegue"]){
+        WriteMedicalRecordVCViewController *writeMedicalVC = (WriteMedicalRecordVCViewController*)segue.destinationViewController;
+        writeMedicalVC.labelString = self.selectedStr;
+        writeMedicalVC.WriteDelegate = self;
         [[NSUserDefaults standardUserDefaults] setBool:YES forKey:@"referenceTemplateString"];
     }
 }
+#pragma mask - write delegate
+-(void)didWriteStringToMedicalRecord:(NSString *)writeString
+{
+    Node *tempNode = [self.fetchResultController objectAtIndexPath:self.currentIndexPath];
+    tempNode.nodeContent = writeString;
+    [self.coreDataStack saveContext];
 
+}
 - (IBAction)unwindSegueFromCreateTemplateToAdmissioVC:(UIStoryboardSegue *)segue
 {
     

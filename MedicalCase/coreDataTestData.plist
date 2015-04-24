@@ -142,7 +142,8 @@
 									<array>
 										<dict>
 											<key>nodeName</key>
-											<string>发病情况</string>
+											<string>发病情况发病时间（时间段）。
+</string>
 											<key>childNode</key>
 											<array/>
 										</dict>

@@ -12,22 +12,34 @@
 	<dict>
 		<key>56AEC78DFEB48FBEB4164C0B3BEFB38AAB59A411</key>
 		<string>http://192.168.10.120/qiuhongyang/medicalcasedemo.git</string>
+		<key>A4AFAA73AA579EC0B208F26BA80F4837F5131704</key>
+		<string>https://github.com/FindHacker/medicalCase.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
 	<string>MedicalCase.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>56AEC78DFEB48FBEB4164C0B3BEFB38AAB59A411</key>
+		<string>../../../medicalcasedemo</string>
+		<key>A4AFAA73AA579EC0B208F26BA80F4837F5131704</key>
 		<string>../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
-	<string>http://192.168.10.120/qiuhongyang/medicalcasedemo.git</string>
+	<string>https://github.com/FindHacker/medicalCase.git</string>
 	<key>IDESourceControlProjectVersion</key>
 	<integer>111</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>56AEC78DFEB48FBEB4164C0B3BEFB38AAB59A411</string>
+	<string>A4AFAA73AA579EC0B208F26BA80F4837F5131704</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>A4AFAA73AA579EC0B208F26BA80F4837F5131704</string>
+			<key>IDESourceControlWCCName</key>
+			<string>medicalCase</string>
+		</dict>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>

@@ -1,0 +1,23 @@
+//
+//  AdmissionRecordCell.h
+//  MedicalCase
+//
+//  Created by ihefe-JF on 15/4/1.
+//  Copyright (c) 2015年 ihefe. All rights reserved.
+//
+
+#import <UIKit/UIKit.h>
+
+@protocol AdmissionRecordCellDelegate;
+
+@interface AdmissionRecordCell : UITableViewCell
+@property (weak, nonatomic) IBOutlet UITextView *textView;
+@property (weak,nonatomic) id <AdmissionRecordCellDelegate> textViewDelegate;
+@end
+@protocol AdmissionRecordCellDelegate
+
+@required
+-(void)textViewCell:(AdmissionRecordCell*)cell didChangeText:(NSString*)text;
+-(void)textViewDidBeginEditing:(UITextView*)textView withCellIndexPath:(NSIndexPath*)indexPath;
+@end
+

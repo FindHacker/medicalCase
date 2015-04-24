@@ -173,7 +173,7 @@
         HUDSubViewController *hubVC = (HUDSubViewController*)segue.destinationViewController;
         hubVC.detailCaseNode = [self getSelectedNode];
         hubVC.title = @"选择内容";
-        hubVC.progectName = self.title;
+       // hubVC.progectName = self.title;
        // hubVC.detailCaseNode =
     }else if([segue.identifier isEqualToString:@"popoverConditionSegue"]){
         UINavigationController *nagVC = (UINavigationController*)segue.destinationViewController;

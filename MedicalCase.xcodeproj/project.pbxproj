@@ -72,6 +72,8 @@
 		4777ADF91ACD06E800E08172 /* ModelPlateConditionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4777ADF81ACD06E800E08172 /* ModelPlateConditionViewController.m */; };
 		4777ADFD1ACD167200E08172 /* AgePickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4777ADFC1ACD167200E08172 /* AgePickerViewController.m */; };
 		4777AE001ACD2CDC00E08172 /* TemplateConditionSelectedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4777ADFF1ACD2CDC00E08172 /* TemplateConditionSelectedViewController.m */; };
+		47DDDD021AE5EBB700C9AA6F /* WriteMedicalRecordVCViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 47DDDD011AE5EBB700C9AA6F /* WriteMedicalRecordVCViewController.m */; };
+		47DDDD051AE5F4F200C9AA6F /* AutoHeightTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 47DDDD041AE5F4F200C9AA6F /* AutoHeightTextView.m */; };
 		47E4FB511AD67A3C00875B9A /* AFHTTPRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 47E4FB3D1AD67A3C00875B9A /* AFHTTPRequestOperation.m */; };
 		47E4FB521AD67A3C00875B9A /* AFHTTPRequestOperationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 47E4FB3F1AD67A3C00875B9A /* AFHTTPRequestOperationManager.m */; };
 		47E4FB531AD67A3C00875B9A /* AFHTTPSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 47E4FB411AD67A3C00875B9A /* AFHTTPSessionManager.m */; };
@@ -234,6 +236,10 @@
 		4777ADFC1ACD167200E08172 /* AgePickerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AgePickerViewController.m; sourceTree = "<group>"; };
 		4777ADFE1ACD2CDC00E08172 /* TemplateConditionSelectedViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TemplateConditionSelectedViewController.h; sourceTree = "<group>"; };
 		4777ADFF1ACD2CDC00E08172 /* TemplateConditionSelectedViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TemplateConditionSelectedViewController.m; sourceTree = "<group>"; };
+		47DDDD001AE5EBB700C9AA6F /* WriteMedicalRecordVCViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WriteMedicalRecordVCViewController.h; sourceTree = "<group>"; };
+		47DDDD011AE5EBB700C9AA6F /* WriteMedicalRecordVCViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WriteMedicalRecordVCViewController.m; sourceTree = "<group>"; };
+		47DDDD031AE5F4F200C9AA6F /* AutoHeightTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AutoHeightTextView.h; sourceTree = "<group>"; };
+		47DDDD041AE5F4F200C9AA6F /* AutoHeightTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AutoHeightTextView.m; sourceTree = "<group>"; };
 		47E4FB3C1AD67A3C00875B9A /* AFHTTPRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPRequestOperation.h; sourceTree = "<group>"; };
 		47E4FB3D1AD67A3C00875B9A /* AFHTTPRequestOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFHTTPRequestOperation.m; sourceTree = "<group>"; };
 		47E4FB3E1AD67A3C00875B9A /* AFHTTPRequestOperationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPRequestOperationManager.h; sourceTree = "<group>"; };
@@ -544,6 +550,10 @@
 				473FE5171AD36B2C003B48B4 /* CoreDataStack.m */,
 				473FE5141AD36B12003B48B4 /* coreDataTestData.plist */,
 				4777ADBA1ACB819300E08172 /* Main.storyboard */,
+				47DDDD001AE5EBB700C9AA6F /* WriteMedicalRecordVCViewController.h */,
+				47DDDD011AE5EBB700C9AA6F /* WriteMedicalRecordVCViewController.m */,
+				47DDDD031AE5F4F200C9AA6F /* AutoHeightTextView.h */,
+				47DDDD041AE5F4F200C9AA6F /* AutoHeightTextView.m */,
 				47EA34EE1AD5278300BC8F11 /* ShowTemplateViewControllerTwo.h */,
 				47EA34EF1AD5278300BC8F11 /* ShowTemplateViewControllerTwo.m */,
 				473FE49B1ACE8F69003B48B4 /* Layout */,
@@ -812,6 +822,7 @@
 				473FE5061ACE8F69003B48B4 /* SBJsonWriter.m in Sources */,
 				4744C6FB1AD4F20B00727690 /* Node.m in Sources */,
 				4777ADFD1ACD167200E08172 /* AgePickerViewController.m in Sources */,
+				47DDDD021AE5EBB700C9AA6F /* WriteMedicalRecordVCViewController.m in Sources */,
 				4777ADF91ACD06E800E08172 /* ModelPlateConditionViewController.m in Sources */,
 				473FE51E1AD37FB3003B48B4 /* TemplateLeftDetailFirstViewController.m in Sources */,
 				473FE2341ACE2A35003B48B4 /* ShowTemplateViewController.m in Sources */,
@@ -838,6 +849,7 @@
 				4744C6FE1AD4F20B00727690 /* Template.m in Sources */,
 				473FE4FB1ACE8F69003B48B4 /* NSObject+SBJson.m in Sources */,
 				473FE4FD1ACE8F69003B48B4 /* SBJsonStreamParser.m in Sources */,
+				47DDDD051AE5F4F200C9AA6F /* AutoHeightTextView.m in Sources */,
 				473FE4E61ACE8F69003B48B4 /* WLKObject.m in Sources */,
 				473FE5021ACE8F69003B48B4 /* SBJsonStreamWriterAccumulator.m in Sources */,
 				473FE4FF1ACE8F69003B48B4 /* SBJsonStreamParserAdapter.m in Sources */,

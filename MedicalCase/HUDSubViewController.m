@@ -20,7 +20,7 @@
 @property (nonatomic,strong) id multiTablesObsevToken;
 @property (weak, nonatomic) IBOutlet UIView *labelView;
 @property (weak, nonatomic) IBOutlet UIActivityIndicatorView *refreshView;
-
+@property (nonatomic,strong) NSString *originText;
 @end
 
 @implementation HUDSubViewController
@@ -61,8 +61,43 @@
     [super viewDidLoad];
     [self configSelectedTextLabel];
     
-    [self.refreshView startAnimating];
     self.selectedText.text = _multiTables.caseNode.nodeContent;
+}
+-(void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    
+    if (!self.isInContainerView) {
+        [self.refreshView startAnimating];
+
+    }
+}
+-(void)setIsInContainerView:(BOOL)isInContainerView
+{
+    _isInContainerView = isInContainerView;
+    
+    [self addContainerViewObserver];
+
+}
+-(void)addContainerViewObserver
+{
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(didSelectedCellLabel:) name:@"containerToSub" object:nil];
+}
+-(void)didSelectedCellLabel:(NSNotification *)info
+{
+    if ([self.selectedText.text isEqualToString:self.originText]) {
+        
+    }else {
+        if (self.selectedText.text != nil ) {
+            [self.subDelegate didSelectedNodesString:self.selectedText.text withParentNodeName:self.detailCaseNode.nodeName];
+        }
+    }
+    self.detailCaseNode = (WLKCaseNode*)[info object];
+    _multiTables.caseNode = self.detailCaseNode;
+    [_multiTables buildUI];
+    
+    self.originText = self.selectedText.text;
+
 }
 
 - (void)viewDidAppear:(BOOL)animated
@@ -111,6 +146,12 @@
     [[NSNotificationCenter defaultCenter] postNotificationName:kInputTextCompleted object:self.selectedText.text];
     
    
+}
+-(void)dealloc
+{
+    if (self.isInContainerView) {
+        [[NSNotificationCenter defaultCenter] removeObserver:self];
+    }
 }
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
